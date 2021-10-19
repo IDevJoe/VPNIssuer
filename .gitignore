@@ -1,0 +1,6 @@
+*.crt
+*.key
+*.pem
+/node_modules
+/.idea
+config.json

@@ -1,0 +1,12 @@
+{
+  "issue_type": "mac",
+  "mac_resolver": {
+    "type": "windows",
+    "aou_host": "127.0.0.1"
+  },
+  "remote_ip": "0.0.0.0",
+  "remote_port": "1337",
+  "ca_cert": "ca.crt",
+  "ca_key": "ca.key",
+  "tls_key": "tls.pem"
+}
