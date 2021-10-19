@@ -7,12 +7,12 @@ const fs = require('fs');
 let exp = new express();
 
 exp.get('/', (req, res) => {
-    let ip = "10.1.0.1";
+    let ip = req.ip;
     resolver.resolve(ip).then(e => res.render('home', {mac: e.mac})).catch(e => res.send('Unauthorized from ' + ip));
 });
 
 exp.post('/rsp', (req, res) => {
-    let ip = "10.1.0.1";
+    let ip = req.ip;
     resolver.resolve(ip).then(e => {
         let mac = e.mac;
         issuer.issueCert(mac).then(cert => {
